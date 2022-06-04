@@ -15,6 +15,7 @@ const createDate = (date,index) => {
     for (let i = 0; i < date.length; i++) {
         arrayDate.push(Date.parse(date[i])/1000);
     }
+    let sortArray = arrayDate.sort();
     return arrayDate.join("-");
   }else{
     return (Date.parse(date[index])/1000).toString();
