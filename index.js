@@ -17,7 +17,7 @@ const createDate = (date,index) => {
     }
     return arrayDate.join("-");
   }else{
-    return Date.parse(date[index]);
+    return Date.parse(date[index]).toString();
   }
   
 };
