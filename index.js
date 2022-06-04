@@ -10,15 +10,15 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 
 const createDate = (date,index) => {
-  if (!index) {
+  let sortArray = date.sort();
+  if (isNaN(index)) {
     let arrayDate = [];
-    for (let i = 0; i < date.length; i++) {
-        arrayDate.push(Date.parse(date[i])/1000);
+    for (let i = 0; i < sortArray.length; i++) {
+        arrayDate.push(Date.parse(sortArray[i])/1000);
     }
-    let sortArray = arrayDate.sort();
     return arrayDate.join("-");
   }else{
-    return (Date.parse(date[index])/1000).toString();
+    return (Date.parse(sortArray[index])/1000).toString();
   }
   
 };
